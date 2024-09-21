@@ -1,0 +1,85 @@
+.aside_head {
+  display: flex;
+  column-gap: 10px;
+}
+
+.aside_head__button, 
+.aside__container__button,
+.aside_head__button_right {
+  background-color: rgba(255, 255, 255, 0);
+  border:none;
+}
+
+.aside_head__button_right {
+  margin-left:auto;
+  margin-right:10px;
+}
+
+.aside_head__button:hover, 
+.aside__container__button:hover {
+  transform: scale(1.1);
+}
+
+.aside__menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left:10px;
+  margin-top:30px;
+  height:364px;
+}
+
+.aside__menu a {
+  display:inline-block;
+  text-decoration: none;
+  color: #1B1C21;
+}
+
+.aside__menu a:hover {
+  color: #7E7E82;
+  transform-origin:left;
+  transform: scale(1.1);
+}
+
+.aside__menu a:hover::before {
+  display:block;
+  position:absolute;
+  content: "";
+  width:4px;
+  height:32px;
+  background-color: #41F6D7;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: -5px;
+  left:-23px;
+}
+
+.aside__container {
+  display: flex;
+  flex-direction: column;
+  margin-top:auto;
+  row-gap: 10px;
+}
+
+.aside__container__mobile-number {
+  font-family: "TT Lakes Bold";
+  color: #1B1C21;
+  font-size:24px;
+  text-decoration: none;
+}
+
+.aside__container__email {
+  text-decoration:none;
+  color: #1B1C21;
+}
+
+.aside__container__button__language:focus {
+  color:#7E7E82;
+}
+
+@media screen and (min-width: 1120px) {
+.button_hidden {
+  display:none;
+}
+}

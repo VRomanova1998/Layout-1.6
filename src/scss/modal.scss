@@ -1,0 +1,157 @@
+
+
+.modal {
+    font-family: 'TT Lakes Regular';
+    font-size: 14px;
+    min-width:320px;
+    padding: 0 20px;
+    margin: 0;
+    position: fixed;
+    top:0;
+    left: inherit;
+    border:none;
+    border-left: 1px solid #D9FFF5;
+    min-height: 100%;
+    box-shadow: 0px -10px 20px 0px rgba(0,0,0, 0.1);
+    background-color: white;
+    z-index: 5;
+}
+
+.button_close {
+    position: fixed;
+    width:40px;
+    height:40px;
+    background-color: #FF3E79;
+    border: none;
+    border-radius: 50%;
+    background-image: url("../img/icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_close:hover {
+    transform: scale(1.1);
+}
+
+.button_close:active {
+    transform: scale(1.1);
+}
+
+.modal::backdrop {
+    background-color: white;
+    opacity: 96.05%;
+}
+
+.modal_title {
+    font-family: 'TT Lakes Bold';
+    font-size: 24px;
+    position: relative;
+}
+
+.modal_title::before {
+    display: block;
+    content:"";
+    height:40px;
+    width:4px;
+    background-color: #41F6D7;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    left:-20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input {
+    height:48px;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    margin: 0px 10px;
+    padding: 10px 10px;
+}
+
+.form_input::placeholder {
+    font-family: 'TT Lakes Regular';
+    font-size: 16px;
+}
+
+.form_input_textarea {
+    height:114px;
+}
+
+.modal_text {
+    color: #7E7E82;
+} 
+
+.modal_text_link {
+    color: #FF3E79;
+    text-decoration: none;
+}
+
+.modal_button {
+    width:136px;
+    height:32px;
+    background-color: #FF3E79;
+    border: none;
+    border-radius: 20px;
+    color:white;
+    text-transform: uppercase;
+    font-family: 'TT Lakes Bold';
+    font-size: 12px;
+    position: relative;
+    left:50%;
+}
+
+.modal_button::after {
+    content: url("../img/dropdown.png");
+    margin-left:15px;
+    vertical-align: middle;
+}
+
+.modal_button:active {
+    transform: scale(0.9);
+    transition-timing-function: ease-in-out;
+}
+
+.container_opacity_aside {
+    position: fixed;
+    width:100vw;
+    height:100%;
+    top:0;
+    z-index:-1;
+}
+
+.container_opacity_aside_open {
+    background-color: white;
+    opacity: 96.05%;
+    z-index: 2;   
+}
+
+    
+
+@media screen and (max-width: 767px){
+.modal {
+    padding-top:100px;
+}
+
+.button_close {
+    top:40px;
+}
+}
+
+@media screen and (min-width: 768px) {
+.modal {
+    width:440px;
+}
+    
+.button_close {
+    right:470px;
+}
+    
+.modal-feedback_button_close {
+    top:20px;
+}
+}

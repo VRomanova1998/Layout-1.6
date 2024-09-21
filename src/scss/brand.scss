@@ -1,0 +1,132 @@
+.container__title {
+    display: inline-block;
+    width:100%;
+    text-transform: uppercase;
+    padding: 20px;
+    color: #7E7E82;
+    vertical-align:bottom;
+    background-image: linear-gradient(to right, #F8F8F8, white);
+}
+
+.list-item-container {
+    display:grid;
+    margin-top:20px;
+    padding-bottom: 15px;
+    padding-left:10px;
+    margin-left: 0px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 240px;
+    height: 72px;
+    padding:10px;
+    border: 1px solid #EAEAEA;
+    border-radius:7px;
+    margin: 10px 5px;
+}
+
+.picture_button {
+    display: inline-block;
+    content:"";
+    background: url('../img/dropdown.svg') no-repeat center; 
+    width: 40px;
+    height:40px;
+    border: 2px solid #FF3E79;
+    border-radius:50%;
+    margin-left:auto;
+}
+
+.picture_button:hover {
+    transform:scale(1.1);
+}
+
+.button_open,
+.button_explanation {
+    display: flex;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 24px;
+    padding-left:20px;
+    font-family: 'TT Lakes Medium';
+    font-size: 16px;
+    margin-bottom:20px;
+}
+
+.button::before {
+    display: block;
+    content:"";
+    height:24px;
+    width:24px;
+    background-image: url("../img/expand.svg");
+    border: none;
+}
+
+.button-active::before {
+    transform:rotate(180deg);
+}
+
+.swiper {
+    margin: 0 !important;
+}
+
+
+@media  screen and (max-width: 767px) {
+.button_open {
+    display: none;
+}
+
+.list-item-container,
+.list-item-container_mobile {
+    display: flex; 
+    margin-bottom: 15px;
+    width:260px; 
+}
+
+.list-item-container_mobile {
+    margin-bottom: 25px;
+    padding-left:10px;
+}
+       
+.slider .swiper-slide {
+    width:240px;
+    margin-right:10px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #B5B6BC;
+    width:12px;
+    height: 12px;
+}
+}
+         
+@media  screen and (min-width: 768px) and (max-width: 1119px) {
+.list-item-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.list-item {
+    width:224px;
+}
+
+.hidden-tablet {
+    display:none;
+}
+}
+
+@media  screen and (min-width: 1120px) {
+.list-item-container {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.hidden-monitor {
+    display:none;
+}
+}
+
+
+  
+ 
+ 

@@ -1,0 +1,90 @@
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: white;
+  margin:20px;
+  margin-bottom: 0;
+}
+
+.table-button{   
+  width:136px;
+  height:32px;
+  background-color: #FF3E79;
+  border: none;
+  border-radius: 20px;
+  color:white;
+  text-transform: uppercase;
+  font-family: 'TT Lakes Bold';
+  font-size: 12px;
+  position: relative;
+}
+
+
+.table-button::after {
+  content: url("../img/dropdown.png");
+  margin-left:15px;
+  vertical-align: middle;
+}
+
+.table-button:active {
+  transform: scale(0.9);
+  transition-timing-function: ease-in-out;
+}
+
+.button_explanation_text {
+  text-decoration: none;
+  color: black;
+}
+
+.button_explanation_text:hover {
+  color:#FF3E79;
+}
+
+.table-item {
+  border-bottom: 2px solid #F8F8F8;
+  height:65px;
+  padding:10px;
+  text-wrap: nowrap;
+}
+
+.table-item:nth-child(-n+4) {
+  background-color:#F8F8F8;
+  padding-top: 30px;
+}
+
+.text_explanation {
+  margin:20px;
+  max-width: 450px;
+}
+
+.button_explanation_text_after {
+  font-weight: bold;
+  color:#FF3E79;
+}
+
+
+@media  screen and (max-width: 767px) {
+.button_explanation {
+  flex-wrap: nowrap;}
+
+.button_explanation_text {
+  margin-right:20px;
+  text-align: left;
+}
+
+.table_item_mobile {
+  text-wrap: wrap;
+  min-width:270px;
+  height:200px;
+  background-color: white;
+  padding:15px;
+}
+
+.table_item_mobile_title {
+  color: gray;
+}
+
+.table-button {
+  margin-left: 20px;
+}
+}

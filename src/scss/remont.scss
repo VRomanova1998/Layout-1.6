@@ -1,0 +1,18 @@
+.item_remont, 
+.table_item_mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  width: 240px;
+  height: 160px;
+  padding:10px;
+  border: 1px solid #EAEAEA;
+  border-radius:7px;
+  margin: 10px 5px;
+  text-wrap: nowrap;
+}
+
+.item_remont {
+  font-size: 16px;
+}
